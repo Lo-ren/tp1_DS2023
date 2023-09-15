@@ -15,6 +15,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 
 public class Cliente extends EntidadBase {
 
@@ -25,13 +26,16 @@ public class Cliente extends EntidadBase {
 
     @OneToMany
     @JoinColumn(name = "cliente-id")
+
     @Builder.Default
+
     private List<Domicilio> domicilios = new ArrayList<>();
 
     @OneToMany
     @JoinColumn(name = "cliente-id")
     @Builder.Default
     private List<Pedido> pedidos = new ArrayList<>();
+
 
     public void agregarDomicilio(Domicilio domi){
 

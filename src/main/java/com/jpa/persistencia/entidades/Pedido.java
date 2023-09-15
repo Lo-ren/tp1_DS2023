@@ -1,5 +1,7 @@
 package com.jpa.persistencia.entidades;
 
+import com.jpa.persistencia.enumeraciones.Estado;
+import com.jpa.persistencia.enumeraciones.TipoEnvio;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
@@ -21,13 +23,13 @@ import java.util.List;
 
 public class Pedido extends EntidadBase{
 
-    private String[] estado = {"iniciado", "preparación", "entregado"} ;
+    private Estado estado;
     private Date fecha;
-    private String[] tipoEnvio = {"delivery", "retira"};
+    private TipoEnvio tipoEnvio;
     private double total;
 
     @OneToOne
-    @JoinColumn(nullable = true, name = "idFactura")
+    @JoinColumn(nullable = true, name = "Factura-id")
     private Factura factura;
 
     @OneToMany

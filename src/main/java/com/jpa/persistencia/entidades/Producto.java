@@ -1,5 +1,6 @@
 package com.jpa.persistencia.entidades;
 
+import com.jpa.persistencia.enumeraciones.Tipo;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,14 +17,14 @@ import java.lang.reflect.Array;
 
 public class Producto extends EntidadBase {
 
-    private String[] tipo = {"manufacturado", "insumo"};
+    private Tipo tipo;
     private int tiempoEstimadoCocina;
     private String denominacion;
     private double precioCompra;
+    private double precioVenta;
     private int stockActual;
     private int stockMinimo;
     private String unidadMedida;
     private String receta;
-
 
 }

@@ -1,5 +1,6 @@
 package com.jpa.persistencia.entidades;
 
+import com.jpa.persistencia.enumeraciones.FormaPago;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -21,6 +22,6 @@ public class Factura extends EntidadBase {
     private int numero;
     private Date fecha;
     private double descuento;
-    private String[] formaPago = {"efectivo", "etc"};
-
+    private FormaPago formaPago;
+    private int total;
 }

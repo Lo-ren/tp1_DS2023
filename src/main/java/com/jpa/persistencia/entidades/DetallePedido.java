@@ -18,7 +18,7 @@ public class DetallePedido extends EntidadBase {
     private double subtotal;
 
     @ManyToOne
-    @JoinColumn(name = "idProducto")
+    @JoinColumn(name = "Producto-id")
     private Producto producto;
 
 }
