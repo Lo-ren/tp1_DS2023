@@ -1,5 +1,6 @@
 package com.jpa.persistencia.entidades;
 
+import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
@@ -7,6 +8,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.CascadeType;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 
+
 public class Cliente extends EntidadBase {
 
     private String nombre;
@@ -24,22 +27,22 @@ public class Cliente extends EntidadBase {
     private String telefono;
     private String email;
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.MERGE, orphanRemoval = true, fetch = FetchType.EAGER)
     @JoinColumn(name = "cliente-id")
 
     @Builder.Default
 
     private List<Domicilio> domicilios = new ArrayList<>();
 
-    @OneToMany
+    @OneToMany(cascade = CascadeType.MERGE, orphanRemoval = true, fetch = FetchType.EAGER)
     @JoinColumn(name = "cliente-id")
     @Builder.Default
     private List<Pedido> pedidos = new ArrayList<>();
 
 
-    public void agregarDomicilio(Domicilio domi){
+    public void agregarDomicilio(Domicilio domicilio){
 
-        domicilios.add(domi);
+        domicilios.add(domicilio);
     }
 
     public void agregarPedido(Pedido ped){

@@ -103,6 +103,8 @@ public class PersistenciaApplication {
 			//guardar cliente
 			clienteRepository.save(clienteUno);
 
+			rubroRepository.save(pastas);
+
 			//recuperar objeto rubro desde la base de datos
 			Rubro rubroRecuperado = rubroRepository.findById(pastas.getId()).orElse(null);
 			if (rubroRecuperado != null){
