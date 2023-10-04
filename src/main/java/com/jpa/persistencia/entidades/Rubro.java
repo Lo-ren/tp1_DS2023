@@ -23,7 +23,7 @@ public class Rubro extends EntidadBase{
     @Builder.Default
     private List<Producto> productos = new ArrayList<>();
 
-    public void agregarProducto(Producto prod){
+    public void agregarProducto(Producto prod, Producto fideoTallarin){
 
         productos.add(prod);
     }
