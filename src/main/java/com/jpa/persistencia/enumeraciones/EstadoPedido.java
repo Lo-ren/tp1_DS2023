@@ -1,6 +1,6 @@
 package com.jpa.persistencia.enumeraciones;
 
-public enum Estado {
+public enum EstadoPedido {
     Iniciado,
     Preparacion,
     Entregado

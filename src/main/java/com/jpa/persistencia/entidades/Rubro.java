@@ -35,7 +35,7 @@ public class Rubro extends EntidadBase{
                     + ", Unidad Medida: " + producto.getUnidadMedida() + ", Precio Compra: " + producto.getPrecioCompra()
                     + ", Precio Venta: " + producto.getPrecioVenta() + ", Stock Actual: " + producto.getStockActual()
                     + ", Stock Min: " + producto.getStockMinimo() + ", Tiempo Estimado Cocina: " + producto.getTiempoEstimadoCocina()
-                    + ", Tipo: " + producto.getTipo());
+                    + ", Tipo: " + producto.getTipoProducto());
         }
     }
 }

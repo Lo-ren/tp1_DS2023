@@ -1,9 +1,10 @@
 package com.jpa.persistencia.repositorios;
 
 import com.jpa.persistencia.entidades.Cliente;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.jpa.persistencia.repositorios.EntidadBaseRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ClienteRepository extends JpaRepository<Cliente, Long> {
+public interface ClienteRepository extends EntidadBaseRepository<Cliente, Long> {
+    //Realizar querys
 }

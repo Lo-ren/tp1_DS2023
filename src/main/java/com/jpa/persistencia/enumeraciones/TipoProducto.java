@@ -1,6 +1,6 @@
 package com.jpa.persistencia.enumeraciones;
 
-public enum Tipo {
+public enum TipoProducto {
     Manufacturado,
     Insumo
 }

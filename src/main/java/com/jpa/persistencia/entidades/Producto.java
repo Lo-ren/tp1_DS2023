@@ -1,13 +1,11 @@
 package com.jpa.persistencia.entidades;
 
-import com.jpa.persistencia.enumeraciones.Tipo;
+import com.jpa.persistencia.enumeraciones.TipoProducto;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.lang.reflect.Array;
 
 @Entity
 @Data
@@ -17,7 +15,7 @@ import java.lang.reflect.Array;
 
 public class Producto extends EntidadBase {
 
-    private Tipo tipo;
+    private TipoProducto tipoProducto;
     private int tiempoEstimadoCocina;
     private String denominacion;
     private double precioCompra;

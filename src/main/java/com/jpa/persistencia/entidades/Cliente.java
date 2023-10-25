@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Data
+@Data//Ver esto, por qué no usamos @Table?
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -29,7 +29,6 @@ public class Cliente extends EntidadBase {
 
     @OneToMany(cascade = CascadeType.MERGE, orphanRemoval = true, fetch = FetchType.EAGER)
     @JoinColumn(name = "cliente-id")
-
     @Builder.Default
 
     private List<Domicilio> domicilios = new ArrayList<>();

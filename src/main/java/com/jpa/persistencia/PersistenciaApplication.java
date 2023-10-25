@@ -1,9 +1,9 @@
 package com.jpa.persistencia;
 
 import com.jpa.persistencia.entidades.*;
-import com.jpa.persistencia.enumeraciones.Estado;
+import com.jpa.persistencia.enumeraciones.EstadoPedido;
 import com.jpa.persistencia.enumeraciones.FormaPago;
-import com.jpa.persistencia.enumeraciones.Tipo;
+import com.jpa.persistencia.enumeraciones.TipoProducto;
 import com.jpa.persistencia.enumeraciones.TipoEnvio;
 import com.jpa.persistencia.repositorios.ClienteRepository;
 import com.jpa.persistencia.repositorios.RubroRepository;
@@ -43,7 +43,7 @@ public class PersistenciaApplication {
 			//crear instancias de productos
 			Producto raviolesRicota = Producto.builder()
 					.denominacion("Ravioles de ricota")
-					.tipo(Tipo.Manufacturado)
+					.tipoProducto(TipoProducto.Manufacturado)
 					.precioCompra(700)
 					.precioVenta(1500)
 					.stockMinimo(3)
@@ -54,7 +54,7 @@ public class PersistenciaApplication {
 					.build();
 			Producto fideoTallarin = Producto.builder()
 					.denominacion("Fideos Tallarines")
-					.tipo(Tipo.Manufacturado)
+					.tipoProducto(TipoProducto.Manufacturado)
 					.precioCompra(400)
 					.precioVenta(900)
 					.stockMinimo(6)
@@ -110,13 +110,13 @@ public class PersistenciaApplication {
 			//Crear Instancia Pedido
 			Pedido pedidoUno = Pedido.builder()
 					.fecha(fecha)
-					.estado(Estado.Preparacion)
+					.estadoPedido(EstadoPedido.Preparacion)
 					.total(6300)
 					.tipoEnvio(TipoEnvio.Delivery)
 					.build();
 			Pedido pedidoDos = Pedido.builder()
 					.fecha(fecha)
-					.estado(Estado.Preparacion)
+					.estadoPedido(EstadoPedido.Preparacion)
 					.total(4500)
 					.tipoEnvio(TipoEnvio.Delivery)
 					.build();

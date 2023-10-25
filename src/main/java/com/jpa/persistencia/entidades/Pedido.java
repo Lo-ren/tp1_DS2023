@@ -1,6 +1,6 @@
 package com.jpa.persistencia.entidades;
 
-import com.jpa.persistencia.enumeraciones.Estado;
+import com.jpa.persistencia.enumeraciones.EstadoPedido;
 import com.jpa.persistencia.enumeraciones.TipoEnvio;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
@@ -23,7 +23,7 @@ import java.util.List;
 
 public class Pedido extends EntidadBase{
 
-    private Estado estado;
+    private EstadoPedido estadoPedido;
     private Date fecha;
     private TipoEnvio tipoEnvio;
     private double total;
